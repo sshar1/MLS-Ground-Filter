@@ -5,17 +5,15 @@ import time
 import mls
 
 # Top-level variables to control display
-DISPLAY_MIDLINE = True
-DISPLAY_SECTION_CIRCLES = True
-SHOW_GROUND = False
-SHOW_ORIGINAL_POINTS = True
-SHOW_ALL_PLOTS = False
+SHOW_GROUND = False             # If you want to show the ground in the plot with the filtered data
+SHOW_ORIGINAL_POINTS = True     # If you want a separate graph that shows the original unfiltered data
+SHOW_ALL_PLOTS = False          # If you want to plot all the point clouds              
 
 DISTANCE_THRESHOLD = 30
 
-POINT_CLOUD_PATH = 'pointclouddata/intensity_2.csv'
+POINT_CLOUD_PATH = 'pointclouddata/point_cloud_120.csv' # USE THIS IF YOU HAVE ONE POINT CLOUD TO CHECK
 
-point_clouds = [
+point_clouds = [                                        # USE THIS IF YOU WANT TO CHECK ALL POINT CLOUDS
     'pointclouddata/point_cloud_73.csv',
     'pointclouddata/point_cloud_120.csv',
     'pointclouddata/point_cloud_221.csv',
