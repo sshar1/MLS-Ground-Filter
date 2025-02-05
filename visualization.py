@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import time
-import mls3
+import mls
 
 # Top-level variables to control display
 DISPLAY_MIDLINE = True
@@ -35,11 +35,11 @@ def parse_and_visualize_clusters(point_cloud_path):
     start = time.time()
 
     # Initialize points and KD-tree
-    true_points = mls3.init_points(point_cloud_path, DISTANCE_THRESHOLD)
+    true_points = mls.init_points(point_cloud_path, DISTANCE_THRESHOLD)
 
     # Classify points as ground or non-ground
     print('classifying points...')
-    ground_mask = np.array([mls3.point_is_ground(point) for point in true_points])
+    ground_mask = np.array([mls.point_is_ground(point) for point in true_points])
     ground_points = true_points[ground_mask]
     non_ground_points = true_points[~ground_mask]
     print('points classified!')
